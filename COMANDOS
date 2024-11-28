@@ -1,0 +1,41 @@
+//EJECUTAR POR PRIMERA VEZ
+composer i
+php artisan migrate
+php artisan db:seed
+php artisan serve
+
+//REFRESH MIGRACION Y SEEDER
+php artisan migrate:refresh
+php artisan migrate:refresh --seed
+
+//GENERAR CLAVE SECRETA JWT
+php artisan jwt:secret
+
+//ACTUALIZAR CAMBIOS GIT HUB
+git pull origin main
+
+
+//CREAR MIGRATION / CONTRALADOR / MODEL
+php artisan make:model User -mrc
+
+//CREAR CONTROLADOR FORMATO API
+php artisan make:controller User/UserController --api
+
+
+//conexion 
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=bdlogistica
+DB_USERNAME=postgres
+DB_PASSWORD=lsmSantMont76
+//
+correo
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=465
+MAIL_USERNAME=luissantander2002@gmail.com
+MAIL_PASSWORD=fyulgseunjugpotb
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS=luissantander2002@gmail.com
+MAIL_FROM_NAME="Sistema Logistic"
